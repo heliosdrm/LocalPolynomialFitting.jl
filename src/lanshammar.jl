@@ -24,7 +24,7 @@ end
 y
 end
 
-function lpffit(x::Vector; h::VecOrMat=[1], p::Integer=0);
+function lpfit(x::Vector; h::VecOrMat=[1], p::Integer=0);
 y = zeros(length(x), p+1)
 for k=1:p+1
   y[:,k] = filt(collect(h[k,:]),1,x)
